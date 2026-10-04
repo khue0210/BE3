@@ -53,11 +53,11 @@
     <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
     <Property Name="ProductName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ProductDecription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ProductPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
     <Property Name="ProductImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Category" Relationship="Self.FK_Pro_Category" FromRole="Product" ToRole="Category" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Produ__619B8048" FromRole="Product" ToRole="OrderDetail" />
+    <Property Name="ProductDescription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
@@ -75,7 +75,7 @@
     </Key>
     <Property Name="Username" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="UserRole" Type="String" MaxLength="1" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="UserRole" Type="String" MaxLength="2" FixedLength="true" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Customers" Relationship="Self.FK_User_Customer" FromRole="User" ToRole="Customer" />
   </EntityType>
   <Association Name="FK_Pro_Category">
